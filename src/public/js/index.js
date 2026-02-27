@@ -9,6 +9,7 @@ const userNameArea = document.getElementById("userName")
 
 Swal.fire({
   title: "Welcome to the chat room",
+  text: "Enter your user name",
   input: "text",
   allowOutsideClick: false,
   inputAttributes: {

@@ -25,6 +25,8 @@ const socketServer = new Server(httpServer);
 let messages = [];
 
 socketServer.on('connection', (client) => {
+
+  client.emit("newMessage", messages)
   
   client.on("newUser", (userName) => {
     client.broadcast.emit("newUser", userName)
